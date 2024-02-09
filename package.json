@@ -3,8 +3,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "repository": "https://github.com/LeaYabra/MyModal",
-  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeaYabra/MyModal.git"
+  },
+  "version": "0.6.0",
   "description": "My modal a custom React component",
   "scripts": {
     "rollup": "rollup -c",
