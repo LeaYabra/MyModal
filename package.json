@@ -1,13 +1,13 @@
 {
   "name": "@leayabra/mymodal",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/LeaYabra"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeaYabra/MyModal.git"
   },
-  "version": "0.6.0",
+  "version": "0.0.9",
   "description": "My modal a custom React component",
   "scripts": {
     "rollup": "rollup -c",
@@ -50,7 +50,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
-    "typescript": "^4.7.4"
+    "typescript": "^5.3.3"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
