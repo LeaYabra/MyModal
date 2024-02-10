@@ -1,4 +1,3 @@
-// modal.stories.js
 import React, { useState } from 'react';
 import Modal from './Modal';
 
@@ -15,7 +14,7 @@ export const VisibleModal = () => {
     setIsModalVisible(false);
   };
 
-  // Ajoutez la prop setVisible
+  // prop setVisible
   return <Modal visible={isModalVisible} onClose={handleClose} setVisible={setIsModalVisible} />;
 };
 
@@ -31,7 +30,7 @@ export const HiddenModal = () => {
     setIsModalVisible(false);
   };
 
-  // Ajoutez la prop setVisible
+  // prop setVisible
   return (
     <>
       <button onClick={handleOpen}>Open Modal</button>

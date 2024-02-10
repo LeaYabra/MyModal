@@ -1,7 +1,5 @@
-// Modal.tsx
-import React, { useEffect, Dispatch, SetStateAction } from "react";
+import React, { useEffect, Dispatch, SetStateAction, useRef } from "react";
 import "./Modal.css";
-
 
 type MyModalProps = {
   visible: boolean;
@@ -10,33 +8,40 @@ type MyModalProps = {
 };
 
 const MyModal: React.FC<MyModalProps> = ({ visible, onClose, setVisible }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && visible) {
         onClose();
       }
     };
-  
-    // Ajouter un écouteur d'événements
+
+    // Ajout d'un écouteur d'événements
     window.addEventListener("keydown", handleKeyDown);
-  
+
     // Retirer l'écouteur d'événements lors du démontage
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [visible, onClose]);  // Assurez-vous que visible et onClose sont dans la liste des dépendances
-  
-  
+  }, [visible, onClose]); 
 
-  
   useEffect(() => {
-    // Mettre à jour la visibilité externe via la prop setVisible
     setVisible(visible);
   }, [visible]);
-  
+
+  const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (event.target === modalRef.current) {
+      onClose();
+    }
+  };
 
   return (
-    <div className={visible ? "modal show" : "modal hide"}>
+    <div
+      ref={modalRef}
+      className={visible ? "modal show" : "modal hide"}
+      onClick={handleBackdropClick}
+    >
       <div className="modal-content">
         <span className="close" onClick={onClose}>
           &times;
