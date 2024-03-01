@@ -70,7 +70,7 @@ export default App;
 This components needs four params :
 
 - @param {string} children : the content of your modal
-- param {boolean} visible: A boolean state representing whether the modal is open or not.
+- @param {boolean} visible: A boolean state representing whether the modal is open or not.
 - @param {function} onClose: A function to be called when the modal is closed.
 - @param {function} setVisible: A function to update the visibility state of the modal.
 

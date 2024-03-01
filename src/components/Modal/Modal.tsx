@@ -1,7 +1,7 @@
 import React, { useEffect, Dispatch, SetStateAction, useRef } from "react";
 import "./Modal.css";
 
-type MyModalProps = {
+export type MyModalProps = {
   visible: boolean;
   onClose: () => void;
   setVisible: Dispatch<SetStateAction<boolean>>;
