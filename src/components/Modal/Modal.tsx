@@ -30,6 +30,7 @@ const MyModal: React.FC<MyModalProps> = ({ visible, onClose, setVisible }) => {
     setVisible(visible);
   }, [visible]);
 
+  // Fonction pour gérer le clic sur le fond de la modal
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (event.target === modalRef.current) {
       onClose();

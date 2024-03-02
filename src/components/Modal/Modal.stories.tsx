@@ -1,25 +1,42 @@
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import MyModal, { MyModalProps } from "./Modal";
+import React, { useState } from 'react';
+import MyModal, { MyModalProps } from './Modal';
 
 export default {
-  title: "MyModal",
+  title: 'MyModal',
   component: MyModal,
-} as Meta;
+};
 
-const Template: Story<MyModalProps> = (args) => {
+export const VisibleModal = (args: MyModalProps) => {
   const handleClose = () => {
-    // Mettez visible à false en appelant la fonction setVisible de vos props
     args.setVisible(false);
-    console.log("Modal is  closed.");
+    console.log('Modal is closed.');
   };
 
   return <MyModal {...args} onClose={handleClose} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {
-  visible: false,
+export const HiddenModal = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleOpen = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleClose = () => {
+    setIsModalVisible(false);
+  };
+
+  // prop setVisible
+  return (
+    <>
+      <button onClick={handleOpen}>Open Modal</button>
+      <MyModal visible={isModalVisible} onClose={handleClose} setVisible={setIsModalVisible} />
+    </>
+  );
+};
+
+VisibleModal.args = {
+  visible: true,
   onClose: () => {},
-  setVisible: () => {}, // Assurez-vous que setVisible est bien défini ici
+  setVisible: () => {},
 };

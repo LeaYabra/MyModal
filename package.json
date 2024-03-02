@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/LeaYabra/MyModal.git"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "My modal a custom React component",
   "scripts": {
     "rollup": "rollup -c",

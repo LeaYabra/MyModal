@@ -18,7 +18,7 @@ the front-end developer: Lea Yabra
 Install this package:
 
 ```shell
-npm install @leayabra/mymodal@0.1.1
+npm install @leayabra/mymodal@0.1.2
 ```
 
 Import the Modal component:
@@ -97,5 +97,5 @@ npm run rollup
 And publish dist folder on npm :
 
 ```shell
-npm publish ./dist
+npm publish 
 ```
