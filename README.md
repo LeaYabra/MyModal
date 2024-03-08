@@ -104,7 +104,8 @@ Before running your project, ensure you've taken the following crucial step:
 
 1. Authorization Configuration:
 
-Create a file named .npmrc in your project's root directory.
+   Create a file named .npmrc in your project's root directory.
+
 
 2. Github Token:
    - Go to your GitHub account settings.
@@ -115,7 +116,7 @@ Create a file named .npmrc in your project's root directory.
 
 3. Add Token to .npmrc:
 
-Inside the .npmrc file, include the following line, replacing YOUR_NPM_TOKEN with your actual Github token:
+   Inside the .npmrc file, include the following line, replacing YOUR_NPM_TOKEN with your actual Github token:
 
 
 ```plaintext
