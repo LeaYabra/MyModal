@@ -99,3 +99,24 @@ And publish dist folder on npm :
 ```shell
 npm publish 
 ```
+## Important Note: Authorization for Access
+Before running your project, ensure you've taken the following crucial step:
+
+1.Authorization Configuration:
+Create a file named .npmrc in your project's root directory.
+
+2.Github Token:
+   - Go to your GitHub account settings.
+   - Navigate to `Settings` > `Developer settings` > `Personal access tokens` > `Tokens classic` .
+   - Generate a new token with all rights.
+   
+  [Generate GitHub Token](https://github.com/settings/tokens/new)
+
+3.Add Token to .npmrc:
+Inside the .npmrc file, include the following line, replacing YOUR_NPM_TOKEN with your actual Github token:
+
+
+```plaintext
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+@leayabra:registry=https://npm.pkg.github.com/
+```
